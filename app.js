@@ -15,16 +15,71 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     .then((result) => res.json(result));
 });
 
+var taskList = ["Tubes JarKom - 30/10/2018", "Tugas MPPL - 31/10/2018"];
+
 const client = new line.Client(config);
 function handleEvent(event) {
   if (event.type !== 'message' || event.message.type !== 'text') {
     return Promise.resolve(null);
   }
 
-  return client.replyMessage(event.replyToken, {
-    type: 'text',
-    text: event.message.text
-  });
+  var message = event.message.text;
+  var replyMessage = {
+  	type: "text",
+  	text: "This is default text"
+  };
+
+  // daily notification functionality
+  if (message.toLowerCase() == "Input task") {
+  	replyMessage['text'] = "Hello James, please input your task,\nPlease input in this following format :\n[TASK NAME - DD/MM/YY]";
+  }
+
+  if (message.toLowerCase() == "Display task") {
+  	let replyText = "Hello James, Here is the list of your task";
+
+ 	for (let i = 0; i < task.length; i++) {
+ 		replyText += "\n${i}. " + task[i];
+ 	}
+  }
+
+  if (message[0] == '[') {
+  	let task = message.slice(1, message.length - 1);
+  	let n = task.IndexOf('-') - 1;
+
+  	let taskName = message.slice(1, n);
+
+  	// add to list of task
+  	taskList.push(task);
+
+  	replyMessage = {
+	  type: "template",
+	  altText: "this is a confirm template",
+	  template: {
+	    type: "confirm",
+	    actions: [
+	      {
+	        type: "message",
+	        label: "Yes",
+	        text: "Yes"
+	      },
+	      {
+	        type: "message",
+	        label: "No",
+	        text: "No"
+	      }
+	    ],
+	    text: "Are you sure you want to input \"${taskName}\" to task list?"
+	  }
+	};
+  }
+
+  if (message == "Yes") {
+  	let task = taskList[taskList.length - 1];
+
+  	replyMessage['text'] = "\"${task}\" is successfully added to your task";
+  }
+
+  return client.replyMessage(event.replyToken, replyMessage);
 }
 
 app.listen(process.env.PORT || 5000, function() {
