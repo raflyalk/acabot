@@ -30,11 +30,11 @@ function handleEvent(event) {
   };
 
   // daily notification functionality
-  if (message.toLowerCase() == "Input task") {
+  if (message.toLowerCase() == "input task") {
   	replyMessage['text'] = "Hello James, please input your task,\nPlease input in this following format :\n[TASK NAME - DD/MM/YY]";
   }
 
-  if (message.toLowerCase() == "Display task") {
+  if (message.toLowerCase() == "display task") {
   	let replyText = "Hello James, Here is the list of your task";
 
  	for (let i = 0; i < task.length; i++) {
