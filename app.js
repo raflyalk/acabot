@@ -8,8 +8,6 @@ const config = {
   channelSecret: 'b59f7ec80687b600e55d0be711128ffd'
 };
 
-const PORT = process.env.port || 3000;
-
 const app = express();
 app.post('/webhook', line.middleware(config), (req, res) => {
   Promise
@@ -29,6 +27,6 @@ function handleEvent(event) {
   });
 }
 
-app.listen(PORT, function() {
-	console.log("listening on port " + PORT);
+app.listen(process.env.PORT || 5000, function() {
+	console.log("listening on port");
 });
