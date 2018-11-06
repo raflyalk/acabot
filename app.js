@@ -55,33 +55,42 @@ function handleEvent(event) {
   	var taskName = message.slice(1, n);
 
   	console.log("huhu");
-  	replyMessage = {
-	    type: "confirm",
-	    actions: [
-	      {
-	        type: "message",
-	        label: "Yes",
-	        text: "Yes"
-	      },
-	      {
-	        type: "message",
-	        label: "No",
-	        text: "No"
-	      }
-	    ],
-	    text: "Are you sure you want to input \"${taskName}\" to task list?"
-	};
+  	var confirmMessage = {
+  		"type": "template",
+  		"altText": "this is a confirm template",
+  		"template": {
+    		"type": "confirm",
+    		"actions": [
+      		{
+        		"type": "message",
+        		"label": "Yes",
+        		"text": "Yes"
+      		},
+      		{
+        		"type": "message",
+        		"label": "No",
+        		"text": "No"
+      		}
+    		],
+    		"text": "Are you sure you want to input \"" + task + "\" to task list?"
+  		}
+	}
 
 	console.log("yaya");
 
 	// add to list of task
   	taskList.push(task);
+
+  	return client.replyMessage(event.replyToken, confirmMessage);
   }
 
   if (message === "Yes") {
   	var task = taskList[taskList.length - 1];
+  	var n = message.indexOf('-') - 1;
 
-  	replyMessage['text'] = "\"" + task + "\" is successfully added to your task";
+  	var taskName = task.slice(1, n);
+
+  	replyMessage['text'] = "\"" + taskName + "\" is successfully added to your task";
   }
 
   return client.replyMessage(event.replyToken, replyMessage);
