@@ -48,13 +48,13 @@ function handleEvent(event) {
   	console.log("huyu");
 
   	var task = message.slice(1, message.length - 1);
-  	var n = task.IndexOf('-') - 1;
+  	var n = message.IndexOf('-');
 
-  	var taskName = message.slice(1, n);
+  	console.log("hehe");
 
-  	// add to list of task
-  	taskList.push(task);
+  	var taskName = message.slice(1, n - 1);
 
+  	console.log("huhu");
   	replyMessage = {
 	    type: "confirm",
 	    actions: [
@@ -71,6 +71,11 @@ function handleEvent(event) {
 	    ],
 	    text: "Are you sure you want to input \"${taskName}\" to task list?"
 	};
+
+	console.log("yaya");
+
+	// add to list of task
+  	taskList.push(task);
   }
 
   if (message == "Yes") {
