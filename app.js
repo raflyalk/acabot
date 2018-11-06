@@ -35,26 +35,25 @@ function handleEvent(event) {
   }
 
   if (message.toLowerCase() == "display task") {
-  	let replyText = "Hello James, Here is the list of your task";
+  	var replyText = "Hello James, Here is the list of your task";
 
- 	for (let i = 0; i < task.length; i++) {
- 		replyText += "\n${i}. " + task[i];
+ 	for (let i = 0; i < taskList.length; i++) {
+ 		replyText += "\n${i}. " + taskList[i];
  	}
+
+ 	replyMessage['text'] = replyText;
   }
 
   if (message[0] == '[') {
-  	let task = message.slice(1, message.length - 1);
-  	let n = task.IndexOf('-') - 1;
+  	var task = message.slice(1, message.length - 1);
+  	var n = task.IndexOf('-') - 1;
 
-  	let taskName = message.slice(1, n);
+  	var taskName = message.slice(1, n);
 
   	// add to list of task
   	taskList.push(task);
 
   	replyMessage = {
-	  type: "template",
-	  altText: "this is a confirm template",
-	  template: {
 	    type: "confirm",
 	    actions: [
 	      {
@@ -69,19 +68,20 @@ function handleEvent(event) {
 	      }
 	    ],
 	    text: "Are you sure you want to input \"${taskName}\" to task list?"
-	  }
 	};
   }
 
   if (message == "Yes") {
-  	let task = taskList[taskList.length - 1];
+  	var task = taskList[taskList.length - 1];
 
-  	replyMessage['text'] = "\"${task}\" is successfully added to your task";
+  	replyMessage['text'] = "\"" + task + "\" is successfully added to your task";
   }
 
   return client.replyMessage(event.replyToken, replyMessage);
 }
 
-app.listen(process.env.PORT || 5000, function() {
+const port = process.env.PORT || 5000;
+
+app.listen(port, function() {
 	console.log("listening on port");
 });
