@@ -3,6 +3,8 @@
 const express = require('express');
 const line = require('@line/bot-sdk');
 
+const port = process.env.PORT || 5000;
+
 const config = {
   channelAccessToken: 'x/t0izSXG36JYM6i4LRK5lFEhJcUErHXMZ8/vXepyl5/oGFaYTft0dXM9yZrFmqkfVp8ifumLfUw5I6fZeXjy8CJttsFwwL/cDMXaJbvBqCOI3J9a02gKNymGWPYqkxe28B/8ywtKU+axqmUZYJKiwdB04t89/1O/w1cDnyilFU=',
   channelSecret: 'b59f7ec80687b600e55d0be711128ffd'
@@ -45,17 +47,12 @@ function handleEvent(event) {
   }
 
   if (message[0] === '[') {
-  	console.log("huyu");
-
   	var task = message.slice(1, message.length - 1);
   	var n = message.indexOf('-') - 1;
 
-  	console.log("hehe");
-
   	var taskName = message.slice(1, n);
 
-  	console.log("huhu");
-  	var confirmMessage = {
+  	replyMessage = {
   		"type": "template",
   		"altText": "this is a confirm template",
   		"template": {
@@ -76,27 +73,21 @@ function handleEvent(event) {
   		}
 	}
 
-	console.log("yaya");
-
 	// add to list of task
   	taskList.push(task);
-
-  	return client.replyMessage(event.replyToken, confirmMessage);
   }
 
   if (message === "Yes") {
   	var task = taskList[taskList.length - 1];
   	var n = message.indexOf('-') - 1;
 
-  	var taskName = task.slice(1, n);
+  	var taskName = task.slice(0, n);
 
   	replyMessage['text'] = "\"" + taskName + "\" is successfully added to your task";
   }
 
   return client.replyMessage(event.replyToken, replyMessage);
 }
-
-const port = process.env.PORT || 5000;
 
 app.listen(port, function() {
 	console.log("listening on port");
