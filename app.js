@@ -38,7 +38,7 @@ function handleEvent(event) {
   	var replyText = "Hello James, Here is the list of your task";
 
  	for (let i = 0; i < taskList.length; i++) {
- 		replyText += "\n" + i.toString() + ". " + taskList[i];
+ 		replyText += "\n" + (i+1).toString() + ". " + taskList[i];
  	}
 
  	replyMessage['text'] = replyText;
@@ -48,11 +48,11 @@ function handleEvent(event) {
   	console.log("huyu");
 
   	var task = message.slice(1, message.length - 1);
-  	var n = message.IndexOf('-');
+  	var n = message.indexOf('-') - 1;
 
   	console.log("hehe");
 
-  	var taskName = message.slice(1, n - 1);
+  	var taskName = message.slice(1, n);
 
   	console.log("huhu");
   	replyMessage = {
