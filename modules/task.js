@@ -1,4 +1,5 @@
 // file task.js
+const State = require('./state');
 
 // list of task
 var taskList = ["Tubes JarKom - 30/10/2018", "Tugas MPPL - 31/10/2018"];
@@ -77,7 +78,7 @@ var confirmTask = function(message, currentState) {
 	}
 
 	// STEADY STATE
-	currentState = 0;
+	currentState['status'] = State.STEADY;
 
 	return replyMessage;
 }

@@ -5,7 +5,8 @@ const express = require('express');
 const line = require('@line/bot-sdk');
 
 // from modules
-const task = require('./modules/task')
+const State = require('./modules/state');
+const task = require('./modules/task');
 
 const port = process.env.PORT || 5000;
 
@@ -21,12 +22,10 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     .then((result) => res.json(result));
 });
 
-var State = {
-	STEADY: 0,
-	INPUT_TASK: 1
-}
-
-var currentState = State.STEADY;
+// create object so it can pass by reference
+var currentState = {
+	status: State.STEADY
+};
 
 const client = new line.Client(config);
 function handleEvent(event) {
@@ -46,7 +45,7 @@ function handleEvent(event) {
   } 
 
   if (message.toLowerCase() === "input task") {
-  	currentState = State.INPUT_TASK;
+  	currentState['status'] = State.INPUT_TASK;
   }
 
   if (currentState === State.INPUT_TASK) {
