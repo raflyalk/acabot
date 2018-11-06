@@ -75,6 +75,11 @@ var confirmTask = function(message, currentState) {
   			type: "text",
   			text: "\"" + taskName + "\" is successfully removed from your task"
   		}
+	} else {
+		replyMessage = {
+  			type: "text",
+  			text: "This is default reply text"
+  		};
 	}
 
 	// STEADY STATE
