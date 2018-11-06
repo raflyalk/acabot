@@ -1,7 +1,11 @@
 // file app.js
 
+// from node modules
 const express = require('express');
 const line = require('@line/bot-sdk');
+
+// from modules
+const task = require('./modules/task')
 
 const port = process.env.PORT || 5000;
 
@@ -17,7 +21,12 @@ app.post('/webhook', line.middleware(config), (req, res) => {
     .then((result) => res.json(result));
 });
 
-var taskList = ["Tubes JarKom - 30/10/2018", "Tugas MPPL - 31/10/2018"];
+var State = {
+	STEADY: 0,
+	INPUT_TASK: 1
+}
+
+var currentState = State.STEADY;
 
 const client = new line.Client(config);
 function handleEvent(event) {
@@ -28,62 +37,20 @@ function handleEvent(event) {
   var message = event.message.text;
   var replyMessage = {
   	type: "text",
-  	text: "This is default text"
+  	text: "This is default reply text"
   };
 
-  // daily notification functionality
-  if (message.toLowerCase() === "input task") {
-  	replyMessage['text'] = "Hello James, please input your task,\nPlease input in this following format :\n[TASK NAME - DD/MM/YY]";
-  }
-
+  // ================ TASK INPUT AND NOTIFICATION ==================== //
   if (message.toLowerCase() === "display task") {
-  	var replyText = "Hello James, Here is the list of your task";
+  	replyMessage = task.displayTask();
+  } 
 
- 	for (let i = 0; i < taskList.length; i++) {
- 		replyText += "\n" + (i+1).toString() + ". " + taskList[i];
- 	}
-
- 	replyMessage['text'] = replyText;
+  if (message.toLowerCase() === "input task") {
+  	currentState = State.INPUT_TASK;
   }
 
-  if (message[0] === '[') {
-  	var task = message.slice(1, message.length - 1);
-  	var n = message.indexOf('-') - 1;
-
-  	var taskName = message.slice(1, n);
-
-  	replyMessage = {
-  		"type": "template",
-  		"altText": "this is a confirm template",
-  		"template": {
-    		"type": "confirm",
-    		"actions": [
-      		{
-        		"type": "message",
-        		"label": "Yes",
-        		"text": "Yes"
-      		},
-      		{
-        		"type": "message",
-        		"label": "No",
-        		"text": "No"
-      		}
-    		],
-    		"text": "Are you sure you want to input \"" + task + "\" to task list?"
-  		}
-	}
-
-	// add to list of task
-  	taskList.push(task);
-  }
-
-  if (message === "Yes") {
-  	var task = taskList[taskList.length - 1];
-  	var n = message.indexOf('-') - 1;
-
-  	var taskName = task.slice(0, n);
-
-  	replyMessage['text'] = "\"" + taskName + "\" is successfully added to your task";
+  if (currentState === State.INPUT_TASK) {
+  	replyMessage = task.handleInputTask(message, currentState);
   }
 
   return client.replyMessage(event.replyToken, replyMessage);
