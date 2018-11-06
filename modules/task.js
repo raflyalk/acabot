@@ -62,7 +62,7 @@ var confirmTask = function(message, currentState) {
   			type: "text",
   			text: "\"" + taskName + "\" is successfully added to your task"
   		}
-	} else {
+	} else if (message === "No") {
 		var task = taskList[taskList.length - 1];
   		var n = message.indexOf('-') - 1;
 
