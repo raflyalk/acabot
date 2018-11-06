@@ -53,6 +53,8 @@ function handleEvent(event) {
   	replyMessage = task.handleInputTask(message, currentState);
   }
 
+  // ================================================================ //
+
   return client.replyMessage(event.replyToken, replyMessage);
 }
 
