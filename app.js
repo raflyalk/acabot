@@ -30,11 +30,11 @@ function handleEvent(event) {
   };
 
   // daily notification functionality
-  if (message.toLowerCase() == "input task") {
+  if (message.toLowerCase() === "input task") {
   	replyMessage['text'] = "Hello James, please input your task,\nPlease input in this following format :\n[TASK NAME - DD/MM/YY]";
   }
 
-  if (message.toLowerCase() == "display task") {
+  if (message.toLowerCase() === "display task") {
   	var replyText = "Hello James, Here is the list of your task";
 
  	for (let i = 0; i < taskList.length; i++) {
@@ -44,7 +44,7 @@ function handleEvent(event) {
  	replyMessage['text'] = replyText;
   }
 
-  if (message[0] == '[') {
+  if (message[0] === '[') {
   	console.log("huyu");
 
   	var task = message.slice(1, message.length - 1);
@@ -78,7 +78,7 @@ function handleEvent(event) {
   	taskList.push(task);
   }
 
-  if (message == "Yes") {
+  if (message === "Yes") {
   	var task = taskList[taskList.length - 1];
 
   	replyMessage['text'] = "\"" + task + "\" is successfully added to your task";
