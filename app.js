@@ -38,13 +38,15 @@ function handleEvent(event) {
   	var replyText = "Hello James, Here is the list of your task";
 
  	for (let i = 0; i < taskList.length; i++) {
- 		replyText += "\n${i}. " + taskList[i];
+ 		replyText += "\n" + i.toString() + ". " + taskList[i];
  	}
 
  	replyMessage['text'] = replyText;
   }
 
   if (message[0] == '[') {
+  	console.log("huyu");
+
   	var task = message.slice(1, message.length - 1);
   	var n = task.IndexOf('-') - 1;
 
