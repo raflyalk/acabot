@@ -48,7 +48,7 @@ function handleEvent(event) {
   	currentState['status'] = State.INPUT_TASK;
   }
 
-  if (currentState === State.INPUT_TASK) {
+  if (currentState['status'] === State.INPUT_TASK) {
   	replyMessage = task.handleInputTask(message, currentState);
   }
 
