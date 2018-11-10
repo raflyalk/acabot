@@ -7,6 +7,7 @@ const line = require('@line/bot-sdk');
 // from modules
 const State = require('./modules/state');
 const task = require('./modules/task');
+const recommendation = require('./modules/recommendation');
 
 const port = process.env.PORT || 5000;
 
@@ -50,6 +51,10 @@ function handleEvent(event) {
 
   if (currentState['status'] === State.INPUT_TASK) {
   	replyMessage = task.handleInputTask(message, currentState);
+  }
+
+  if(message,toLowerCase() === "show class recommendation") {
+    replyMessage = recommendation.recommendClasses();
   }
 
   // ================================================================ //
