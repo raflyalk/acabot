@@ -81,6 +81,8 @@ function handleEvent(event) {
 
     if(detailType.substring(0, 5) === "class") {
       replyMessage = recommendation.showDetails(detailType.substring(6));
+    } else if(detailType.substring(0, 11) === "application") {
+      replyMessage = application.showDetails(detailType.substring(13));
     }
   }
 
