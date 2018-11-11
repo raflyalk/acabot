@@ -1,67 +1,109 @@
-var testMessage = {
-"type": "template",
-"altText": "this is a carousel template",
-"template": {
-    "type": "carousel",
-    "columns": [
-        {
-        "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
-        "imageBackgroundColor": "#FFFFFF",
-        "title": "this is menu",
-        "text": "description",
-        "defaultAction": {
-            "type": "uri",
-            "label": "View detail",
-            "uri": "http://example.com/page/123"
-        },
-        "actions": [
+,
             {
-                "type": "postback",
-                "label": "Buy",
-                "data": "action=buy&itemid=111"
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Natural Language Processing",
+              "text": "Learn how to process natural language into forms that computers can process",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Natural Language Processing"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Natural Language Processing"
+                  }
+              ]
             },
             {
-                "type": "postback",
-                "label": "Add to cart",
-                "data": "action=add&itemid=111"
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Computer Vision",
+              "text": "Learn how to process images and identify objects within",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Computer Vision"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Computer Vision"
+                  }
+              ]
             },
             {
-                "type": "uri",
-                "label": "View detail",
-                "uri": "http://example.com/page/111"
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Sistem Terdistribusi",
+              "text": "Learn how to create a distributed system for various purposes",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Sistem Terdistribusi"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Sistem Terdistribusi"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Kriptografi",
+              "text": "Learn how data is encrypted and the various ways to do it",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Kriptografi"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Kriptografi"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Sistem Operasi",
+              "text": "Learn the fundamentals of how operating system works",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Sistem Operasi"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Sistem Operasi"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Manajemen Basis Data",
+              "text": "Find out the various ways to optimize a database's performance",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Manajemen Basis Data"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Manajemen Basis Data"
+                  }
+              ]
             }
-        ]
-        },
-        {
-        "thumbnailImageUrl": "https://example.com/bot/images/item2.jpg",
-        "imageBackgroundColor": "#000000",
-        "title": "this is menu",
-        "text": "description",
-        "defaultAction": {
-            "type": "uri",
-            "label": "View detail",
-            "uri": "http://example.com/page/222"
-        },
-        "actions": [
-            {
-                "type": "postback",
-                "label": "Buy",
-                "data": "action=buy&itemid=222"
-            },
-            {
-                "type": "postback",
-                "label": "Add to cart",
-                "data": "action=add&itemid=222"
-            },
-            {
-                "type": "uri",
-                "label": "View detail",
-                "uri": "http://example.com/page/222"
-            }
-        ]
-        }
-    ],
-    "imageAspectRatio": "rectangle",
-    "imageSize": "cover"
-}
-}

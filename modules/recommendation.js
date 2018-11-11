@@ -85,7 +85,25 @@ var recommendClasses = function() {
               "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
               "imageBackgroundColor": "#FFFFFF",
               "title": "Machine Learning",
-              "text": "Learn how to design and implement programs that implements automatic learning",
+              "text": "Machine Learning",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Machine Learning"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Machine Learning"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Machine Learning",
+              "text": "Machine Learning",
               "defaultAction": {
                   "type": "message",
                   "label": "View detail",
