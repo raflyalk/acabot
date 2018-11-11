@@ -21,9 +21,10 @@ var classDescriptions = {
 var recommendClasses = function() {
     console.log("Creating carousel");
     classNames = []
-    for(var i = 0; i < Object.keys(relatedClasses).length; i++) {
+    var classes = Object.keys(relatedClasses);
+    for(var i = 0; i < classes.length; i++) {
         console.log("Within loop");
-        for(var j = 0; j < relatedClasses[i].length; j++) {
+        for(var j = 0; j < classes[i].length; j++) {
             console.log("Adding class");
             classNames.push(relatedClasses[i][j]);
         }
