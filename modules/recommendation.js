@@ -67,20 +67,13 @@ var recommendClasses = function() {
 
   var testMessage = {
     "type": "template",
-    "altText": "this is a carousel template",
+    "altText": "List of recommended classes",
     "template": {
         "type": "carousel",
         "columns": [
             {
-              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
-              "imageBackgroundColor": "#FFFFFF",
-              "title": "this is menu",
-              "text": "description",
-              "defaultAction": {
-                  "type": "uri",
-                  "label": "View detail",
-                  "uri": "http://example.com/page/123"
-              },
+              "title": "AI",
+              "text": "kelas AI",
               "actions": [
                   {
                       "type": "postback",
@@ -127,9 +120,7 @@ var recommendClasses = function() {
                   }
               ]
             }
-        ],
-        "imageAspectRatio": "rectangle",
-        "imageSize": "cover"
+        ]
     }
   }
   return testMessage;
