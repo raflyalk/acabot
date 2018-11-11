@@ -62,7 +62,7 @@ var recommendClasses = function() {
         columns.push(column);
     }
 
-    console.log("Number of columns: " + columns.length.toString());
+    console.log("Number of columns: " + columns.length);
 
     replyMessage = {
         "type": "template",
