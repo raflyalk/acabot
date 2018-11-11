@@ -44,6 +44,11 @@ var recommendClasses = function() {
             "imageBackgroundColor": "#FFFFFF",
             "title": classNames[i],
             "text": classDescriptions[classNames[i]],
+            "defaultAction": {
+                "type":"message",
+                "label":"Show details",
+                "text":"Show details for class " + classNames[i]
+            },
             "actions": [
                 {
                     "type":"message",
@@ -84,13 +89,13 @@ var recommendClasses = function() {
               "defaultAction": {
                   "type": "message",
                   "label": "View detail",
-                  "text": "Show details for class Machine Learning"
+                  "uri": "Show details for class Machine Learning"
               },
               "actions": [
                   {
-                    "type": "message",
-                    "label": "View detail",
-                    "text": "Show details for class Machine Learning"
+                      "type": "postback",
+                      "label": "Buy",
+                      "data": "action=buy&itemid=111"
                   },
                   {
                       "type": "postback",
@@ -137,7 +142,7 @@ var recommendClasses = function() {
         "imageSize": "cover"
     }
   }
-  return replyMessage;
+  return testMessage;
 }
 
 module.exports.recommendClasses = recommendClasses;
