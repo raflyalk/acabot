@@ -47,8 +47,8 @@ function handleEvent(event) {
   };
 
   // ================ TASK INPUT AND NOTIFICATION ==================== //
-  if(isNaN(message)) {
-    replymessage = course.showClassDetail(message);
+  if(message == 1 || message == 2 || message == 3) {
+    replyMessage = course.showClassDetail(message);
   }
 
   if (message.toLowerCase() === "display task") {
