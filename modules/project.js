@@ -2,6 +2,8 @@ var projects = ["Search Engine Optimization", "Artificial Neural Networks"];
 var descriptions = ["Speed optimizations for search engines", "Improving scalability of ANNs"];
 
 var showProjects = function() {
+
+    console.log("Creating list of projects");
     var columns = [];
 
     for(var i = 0; i < projects.length; i++) {
