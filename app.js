@@ -48,7 +48,16 @@ function handleEvent(event) {
 
   // ================ TASK INPUT AND NOTIFICATION ==================== //
   if(message == 1 || message == 2 || message == 3) {
+    console.log("Within");
     replyMessage = course.showClassDetail(message);
+  }
+
+  if(message.toLowerCase() === "show topics 1") {
+    replyMessage = material.showClassTopics();
+  }
+
+  if(message.toLowerCase() === "show material recommendation 1") {
+    replyMessage = material.showMaterialRecommendation();
   }
 
   if (message.toLowerCase() === "display task") {
@@ -72,6 +81,8 @@ function handleEvent(event) {
 
     if(detailType.substring(0, 5) === "class") {
       replyMessage = recommendation.showDetails(detailType.substring(6));
+    } else if(detailType.substring(0, 11) === "application") {
+      replyMessage = application.showDetails(detailType.substring(12));
     }
   }
 
