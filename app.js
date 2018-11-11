@@ -60,7 +60,7 @@ function handleEvent(event) {
   }
 
   if(message.toLowerCase() === "display course") {
-    replyMessage = course.displayCourses();
+    replyMessage = course.displayCourse();
   }
 
   // ================================================================ //
