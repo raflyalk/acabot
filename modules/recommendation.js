@@ -67,7 +67,9 @@ var recommendClasses = function() {
         "altText": "List of recommended classes",
         "template": {
           "type": "carousel",
-          "columns": columns
+          "columns": columns,
+          "imageAspectRatio": "rectangle",
+          "imageSize": "cover"
         }
   };
   console.log("Returning carousel");
