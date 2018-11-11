@@ -77,7 +77,7 @@ function handleEvent(event) {
   }
 
   if(message.toLowerCase().substring(0, 16) === "show details for") {
-    var detailType = message.toLowerCase().substring(17);
+    var detailType = message.toLowerCase().substring(16);
 
     if(detailType.substring(0, 5) === "class") {
       replyMessage = recommendation.showDetails(detailType.substring(6));

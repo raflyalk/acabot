@@ -30,7 +30,7 @@ var showApplications = function() {
 
     var replyMessage = {
         "type": "template",
-        "altText": "List of recommended classes",
+        "altText": "List of available applications for programs",
         "template": {
           "type": "carousel",
           "columns": columns,
