@@ -65,5 +65,5 @@ function handleEvent(event) {
 }
 
 app.listen(port, function() {
-	console.log("listening on port");
+	console.log('Node app is running on port', app.get('port'));
 });
