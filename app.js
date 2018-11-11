@@ -47,6 +47,10 @@ function handleEvent(event) {
   };
 
   // ================ TASK INPUT AND NOTIFICATION ==================== //
+  if(isNaN(message)) {
+    replymessage = course.showClassDetail(message);
+  }
+
   if (message.toLowerCase() === "display task") {
   	replyMessage = task.displayTask();
   } 
