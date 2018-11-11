@@ -120,7 +120,9 @@ var recommendClasses = function() {
                   }
               ]
             }
-        ]
+        ],
+        "imageAspectRatio": "rectangle",
+        "imageSize": "cover"
     }
   }
   return testMessage;
