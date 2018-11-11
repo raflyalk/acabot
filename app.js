@@ -53,11 +53,11 @@ function handleEvent(event) {
   }
 
   if(message.toLowerCase() === "show topics 1") {
-    replyMessage = course.showClassTopics();
+    replyMessage = material.showClassTopics();
   }
 
   if(message.toLowerCase() === "show material recommendation 1") {
-    replyMessage = course.showMaterialRecommendation();
+    replyMessage = material.showMaterialRecommendation();
   }
 
   if (message.toLowerCase() === "display task") {
