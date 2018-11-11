@@ -23,7 +23,7 @@ var recommendClasses = function() {
     classNames = []
     var classes = Object.keys(relatedClasses);
     for(var i = 0; i < classes.length; i++) {
-        for(var j = 0; j < classes[i].length; j++) {
+        for(var j = 0; j < relatedClasses[classes[i]].length; j++) {
             classNames.push(relatedClasses[classes[i]][j]);
         }
     }
@@ -39,8 +39,6 @@ var recommendClasses = function() {
     var columns = [];
 
     for(var i = 0; i < columnNumber; i++) {
-        console.log(classDescriptions[classNames[i]]);
-        console.log(classNames[i]);
         var column = {
             "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
             "imageBackgroundColor": "#FFFFFF",
