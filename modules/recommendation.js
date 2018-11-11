@@ -18,6 +18,8 @@ var classDescriptions = {
     "Manajemen Basis Data": "Learn how to optimize a DB's performance"
 }
 
+var syllabus = [["Machine Learning", "Introduction", "Fundamentals of AI", "Common Algorithms"], ["Natural Language Processing", "Introduction", "Basic Techniques"], ["Computer Vision", "Introduction", "Image basics", "Image processing with Python"], ["Sistem Terdistribusi", "Introduction", "Distributed System Architectures", "Applications of distributed systems"], ["Kriptografi", "Introduction", "History of cryptography", "Basic encryption techniques"], ["Sistem Operasi", "Introduction", "Computer architecture", "Interaction between OS and hardware"], ["Manajemen Basis Data", "Introduction", "DBMS Basics", "I/O Operations"]];
+
 var recommendClasses = function() {
     console.log("Creating carousel");
     classNames = []
@@ -125,4 +127,25 @@ var recommendClasses = function() {
   return replyMessage;
 }
 
+var showDetails = function(className) {
+    var text = "Syllabus for " + className + "\n";
+    for(var i = 0; i < syllabus.length; i++) {
+        if(syllabus[i][0] === className) {
+            for(var j = 1; j < syllabus[i].length; j++) {
+                text = text + i + ". " + syllabus[i][j] + "\n";
+            }
+        }
+    }
+
+    text = text + "This class is recommended because you took Probability and Statistics";
+
+    var replyMessage = {
+        "type": "text",
+        "text": text
+    }
+
+    return replyMessage;
+}
+
 module.exports.recommendClasses = recommendClasses;
+module.exports.showDetails = showDetails;
