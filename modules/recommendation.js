@@ -39,8 +39,6 @@ var recommendClasses = function() {
     var columns = [];
 
     for(var i = 0; i < columnNumber; i++) {
-        console.log(classNames[i]);
-        console.log(classDescriptions[classNames[i]]);
         var column = {
             "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
             "imageBackgroundColor": "#FFFFFF",
@@ -86,12 +84,12 @@ var recommendClasses = function() {
             {
               "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
               "imageBackgroundColor": "#FFFFFF",
-              "title": "this is menu",
-              "text": "description",
+              "title": "Machine Learning",
+              "text": "Learn how to design and implement programs that implements automatic learning",
               "defaultAction": {
-                  "type": "uri",
+                  "type": "message",
                   "label": "View detail",
-                  "uri": "http://example.com/page/123"
+                  "uri": "Show details for class Machine Learning"
               },
               "actions": [
                   {
@@ -144,7 +142,7 @@ var recommendClasses = function() {
         "imageSize": "cover"
     }
   }
-  return replyMessage;
+  return testMessage;
 }
 
 module.exports.recommendClasses = recommendClasses;
