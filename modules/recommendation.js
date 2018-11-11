@@ -85,7 +85,7 @@ var recommendClasses = function() {
               "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
               "imageBackgroundColor": "#FFFFFF",
               "title": "Machine Learning",
-              "text": "Machine Learning",
+              "text": "Learn how to design and implement programs that implements automatic learning",
               "defaultAction": {
                   "type": "message",
                   "label": "View detail",
@@ -102,18 +102,108 @@ var recommendClasses = function() {
             {
               "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
               "imageBackgroundColor": "#FFFFFF",
-              "title": "Machine Learning",
-              "text": "Machine Learning",
+              "title": "Natural Language Processing",
+              "text": "Learn how to process natural language into forms that computers can process",
               "defaultAction": {
                   "type": "message",
                   "label": "View detail",
-                  "text": "Show details for class Machine Learning"
+                  "text": "Show details for class Natural Language Processing"
               },
               "actions": [
                   {
                       "type": "message",
                       "label": "View detail",
-                      "text": "Show details for class Machine Learning"
+                      "text": "Show details for class Natural Language Processing"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Computer Vision",
+              "text": "Learn how to process images and identify objects within",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Computer Vision"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Computer Vision"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Sistem Terdistribusi",
+              "text": "Learn how to create a distributed system for various purposes",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Sistem Terdistribusi"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Sistem Terdistribusi"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Kriptografi",
+              "text": "Learn how data is encrypted and the various ways to do it",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Kriptografi"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Kriptografi"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Sistem Operasi",
+              "text": "Learn the fundamentals of how operating system works",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Sistem Operasi"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Sistem Operasi"
+                  }
+              ]
+            },
+            {
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Manajemen Basis Data",
+              "text": "Find out the various ways to optimize a database's performance",
+              "defaultAction": {
+                  "type": "message",
+                  "label": "View detail",
+                  "text": "Show details for class Manajemen Basis Data"
+              },
+              "actions": [
+                  {
+                      "type": "message",
+                      "label": "View detail",
+                      "text": "Show details for class Manajemen Basis Data"
                   }
               ]
             }
