@@ -2,26 +2,27 @@
 const State = require('./state');
 
 // list of classes
-var relatedClasses = {
-    "AI" : ["Machine Learning", "Natural Language Processing", "Computer Vision"],
-    "Jaringan Komputer" : ["Sistem Terdistribusi", "Kriptografi", "Sistem Operasi"],
-    "Basis Data" : ["Manajemen Basis Data"]
-};
-
-var classDescriptions = {
-    "Machine Learning": "Learn how to design and implement programs that implements automatic learning",
-    "Natural Language Processing": "Learn how to process natural language into forms that computers can process",
-    "Computer Vision": "Learn how to process images and identify objects within",
-    "Sistem Terdistribusi": "Learn how to create a distributed system for various purposes",
-    "Kriptografi": "Learn how data is encrypted and the various ways to do it",
-    "Sistem Operasi": "Learn the fundamentals of how operating system works",
-    "Manajemen Basis Data": "Find out the various ways to optimize a database's performance"
-}
 
 var recommendClasses = function() {
+    var relatedClasses = {
+        "AI" : ["Machine Learning", "Natural Language Processing", "Computer Vision"],
+        "Jaringan Komputer" : ["Sistem Terdistribusi", "Kriptografi", "Sistem Operasi"],
+        "Basis Data" : ["Manajemen Basis Data"]
+    };
+    
+    var classDescriptions = {
+        "Machine Learning": "Learn how to design and implement programs that implements automatic learning",
+        "Natural Language Processing": "Learn how to process natural language into forms that computers can process",
+        "Computer Vision": "Learn how to process images and identify objects within",
+        "Sistem Terdistribusi": "Learn how to create a distributed system for various purposes",
+        "Kriptografi": "Learn how data is encrypted and the various ways to do it",
+        "Sistem Operasi": "Learn the fundamentals of how operating system works",
+        "Manajemen Basis Data": "Find out the various ways to optimize a database's performance"
+    }
     console.log("Creating carousel");
     classNames = []
     for(var i = 0; i < relatedClasses.length; i++) {
+        console.log("Within loop");
         for(var j = 0; j < relatedClasses[i].length; j++) {
             console.log("Adding class");
             classNames.push(relatedClasses[i][j]);
