@@ -108,6 +108,22 @@ function handleEvent(event) {
     replyMessage = project.showProjects();
   }
 
+  if(message.toLowerCase() === "show email 1") {
+    replyMessage = faculty.showEmail();
+  }
+
+  if(message.toLowerCase() === "consult 5") {
+    replyMessage = faculty.showConsult();
+  }
+
+  //TODO How????
+  if(message.toLowerCase() === "consult yes") {
+    replyMessage = faculty.askConsult();
+  }
+
+  if(message.toLowerCase() === "confirm message yes") {
+    replyMessage = faculty.confirmMessage();
+  }
   // ================================================================ //
 
   return client.replyMessage(event.replyToken, replyMessage);
