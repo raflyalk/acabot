@@ -47,10 +47,8 @@ function handleEvent(event) {
   };
 
   // ================ TASK INPUT AND NOTIFICATION ==================== //
-  console.log(message == 1 || message == 2 || message == 3);
   if(message == 1 || message == 2 || message == 3) {
-    console.log("Within");
-    replymessage = course.showClassDetail(message);
+    replyMessage = course.showClassDetail(message);
   }
 
   if (message.toLowerCase() === "display task") {
