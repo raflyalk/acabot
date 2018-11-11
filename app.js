@@ -56,7 +56,7 @@ function handleEvent(event) {
   	replyMessage = task.handleInputTask(message, currentState);
   }
 
-  if(message,toLowerCase() === "show class recommendation") {
+  if(message.toLowerCase() === "show class recommendation") {
     replyMessage = recommendation.recommendClasses();
   }
 
