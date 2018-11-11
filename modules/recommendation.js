@@ -39,6 +39,8 @@ var recommendClasses = function() {
     var columns = [];
 
     for(var i = 0; i < columnNumber; i++) {
+        console.log(classDescriptions[classNames[i]]);
+        console.log(classNames[i]);
         var column = {
             "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
             "imageBackgroundColor": "#FFFFFF",
