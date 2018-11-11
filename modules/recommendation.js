@@ -40,7 +40,7 @@ var recommendClasses = function() {
 
     for(var i = 0; i < columnNumber; i++) {
         var column = {
-            "title": classNames[i];
+            "title": classNames[i],
             "text": classDescriptions[classNames[i]]
         }
 
