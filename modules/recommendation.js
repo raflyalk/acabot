@@ -74,6 +74,11 @@ var recommendClasses = function() {
             {
               "title": "AI",
               "text": "kelas AI",
+              "defaultAction": {
+                  "type": "uri",
+                  "label": "View detail",
+                  "uri": "http://example.com/page/123"
+              },
               "actions": [
                   {
                       "type": "postback",
