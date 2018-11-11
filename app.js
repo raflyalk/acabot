@@ -116,9 +116,10 @@ function handleEvent(event) {
     replyMessage = faculty.showConsult();
   }
 
-  //TODO How????
   if(message.toLowerCase() === "consult yes") {
     replyMessage = faculty.askConsult();
+  } else {
+    replyMessage = faculty.showConfirmConsult();
   }
 
   if(message.toLowerCase() === "confirm message yes") {
