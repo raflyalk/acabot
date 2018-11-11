@@ -26,7 +26,7 @@ var recommendClasses = function() {
         console.log("Within loop");
         for(var j = 0; j < classes[i].length; j++) {
             console.log("Adding class");
-            classNames.push(relatedClasses[i][j]);
+            classNames.push(relatedClasses[classes[i]][j]);
         }
     }
 
