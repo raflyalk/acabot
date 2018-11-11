@@ -19,6 +19,7 @@ var classDescriptions = {
 }
 
 var recommendClasses = function() {
+    console.log("Creating carousel");
     classNames = []
     for(var i = 0; i < relatedClasses.length; i++) {
         for(var j = 0; j < relatedClasses[i].length; j++) {
@@ -55,7 +56,7 @@ var recommendClasses = function() {
           "columns": columns
         }
   };
-
+  console.log("Returning carousel");
   return replyMessage;
 }
 

@@ -41,8 +41,6 @@ function handleEvent(event) {
   	text: "This is default reply text"
   };
 
-  console.log("Handling event");
-
   // ================ TASK INPUT AND NOTIFICATION ==================== //
   if (message.toLowerCase() === "display task") {
   	replyMessage = task.displayTask();
