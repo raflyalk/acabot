@@ -9,7 +9,8 @@ const State = require('./modules/state');
 const task = require('./modules/task');
 const recommendation = require('./modules/recommendation');
 const course = require('./modules/courses.js');
-const application = require('./modules/application.js')
+const application = require('./modules/application.js');
+const material = require('./modules/material.js');
 
 const port = process.env.PORT || 5000;
 
@@ -66,6 +67,10 @@ function handleEvent(event) {
 
   if(message.toLowerCase() === "show available applications") {
     replyMessage = application.showApplications()
+  }
+
+  if(message.toLowerCase() === "course material recommendation") {
+    replyMessage = material.showMaterials();
   }
 
   // ================================================================ //
