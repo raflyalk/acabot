@@ -58,3 +58,5 @@ var recommendClasses = function() {
 
   return replyMessage;
 }
+
+module.exports.recommendClasses = recommendClasses;
