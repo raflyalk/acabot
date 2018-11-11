@@ -72,8 +72,10 @@ var recommendClasses = function() {
         "type": "carousel",
         "columns": [
             {
-              "title": "AI",
-              "text": "kelas AI",
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "this is menu",
+              "text": "description",
               "defaultAction": {
                   "type": "uri",
                   "label": "View detail",
