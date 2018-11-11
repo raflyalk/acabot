@@ -63,6 +63,14 @@ function handleEvent(event) {
     replyMessage = recommendation.recommendClasses();
   }
 
+  if(message.toLowerCase().substring(0, 16) === "show details for") {
+    var detailType = message.toLowerCase().substring(17);
+
+    if(detailType.substring(0, 5) === "class") {
+      replyMessage = recommendation.showDetails(detailType.substring(6));
+    }
+  }
+
   if(message.toLowerCase() === "display course") {
     replyMessage = course.displayCourse();
   }
