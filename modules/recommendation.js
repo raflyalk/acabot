@@ -130,7 +130,9 @@ var recommendClasses = function() {
 var showDetails = function(className) {
     var text = "Syllabus for " + className + "\n";
     for(var i = 0; i < syllabus.length; i++) {
-        if(syllabus[i][0] === className) {
+        console.log("|" + syllabus[i][0].toLowerCase() + "|");
+        console.log("|" + className.toLowerCase() + "|");
+        if(syllabus[i][0].toLowerCase() === className.toLowerCase()) {
             for(var j = 1; j < syllabus[i].length; j++) {
                 text = text + i + ". " + syllabus[i][j] + "\n";
             }
