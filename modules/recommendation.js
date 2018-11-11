@@ -44,11 +44,6 @@ var recommendClasses = function() {
             "imageBackgroundColor": "#FFFFFF",
             "title": classNames[i],
             "text": classDescriptions[classNames[i]],
-            "defaultAction": {
-                "type":"message",
-                "label":"Show details",
-                "text":"Show details for class " + classNames[i]
-            },
             "actions": [
                 {
                     "type":"message",
@@ -142,7 +137,7 @@ var recommendClasses = function() {
         "imageSize": "cover"
     }
   }
-  return testMessage;
+  return replyMessage;
 }
 
 module.exports.recommendClasses = recommendClasses;
