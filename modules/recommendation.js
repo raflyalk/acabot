@@ -87,9 +87,9 @@ var recommendClasses = function() {
               "title": "Machine Learning",
               "text": "Learn how to design and implement programs that implements automatic learning",
               "defaultAction": {
-                  "type": "message",
+                  "type": "uri",
                   "label": "View detail",
-                  "uri": "Show details for class Machine Learning"
+                  "uri": "http://example.com/page/123"
               },
               "actions": [
                   {
@@ -142,7 +142,7 @@ var recommendClasses = function() {
         "imageSize": "cover"
     }
   }
-  return testMessage;
+  return replyMessage;
 }
 
 module.exports.recommendClasses = recommendClasses;
