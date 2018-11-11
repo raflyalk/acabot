@@ -8,6 +8,7 @@ const line = require('@line/bot-sdk');
 const State = require('./modules/state');
 const task = require('./modules/task');
 const recommendation = require('./modules/recommendation');
+const course = require('./modules/courses.js');
 
 const port = process.env.PORT || 5000;
 
@@ -56,6 +57,10 @@ function handleEvent(event) {
 
   if(message.toLowerCase() === "show class recommendation") {
     replyMessage = recommendation.recommendClasses();
+  }
+
+  if(message.toLowerCase() === "display course") {
+    replyMessage = course.displayCourses();
   }
 
   // ================================================================ //
