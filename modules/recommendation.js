@@ -41,12 +41,19 @@ var recommendClasses = function() {
 
     for(var i = 0; i < columnNumber; i++) {
         var column = {
+            "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+            "imageBackgroundColor": "#FFFFFF",
             "title": classNames[i],
             "text": classDescriptions[classNames[i]],
+            "defaultAction": {
+                "type":"message",
+                "label":"Show details",
+                "text":"Show details for class " + classNames[i]
+            },
             "actions": [
                 {
                     "type":"message",
-                    "label":"Yes",
+                    "label":"Show details",
                     "text":"Show details for class " + classNames[i]
                 }
             ]
@@ -132,7 +139,7 @@ var recommendClasses = function() {
         "imageSize": "cover"
     }
   }
-  return testMessage;
+  return replyMessage;
 }
 
 module.exports.recommendClasses = recommendClasses;
