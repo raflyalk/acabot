@@ -100,30 +100,20 @@ var recommendClasses = function() {
               ]
             },
             {
-              "thumbnailImageUrl": "https://example.com/bot/images/item2.jpg",
-              "imageBackgroundColor": "#000000",
-              "title": "this is menu",
-              "text": "description",
+              "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
+              "imageBackgroundColor": "#FFFFFF",
+              "title": "Machine Learning",
+              "text": "Machine Learning",
               "defaultAction": {
-                  "type": "uri",
+                  "type": "message",
                   "label": "View detail",
-                  "uri": "http://example.com/page/222"
+                  "text": "Show details for class Machine Learning"
               },
               "actions": [
                   {
-                      "type": "postback",
-                      "label": "Buy",
-                      "data": "action=buy&itemid=222"
-                  },
-                  {
-                      "type": "postback",
-                      "label": "Add to cart",
-                      "data": "action=add&itemid=222"
-                  },
-                  {
-                      "type": "uri",
+                      "type": "message",
                       "label": "View detail",
-                      "uri": "http://example.com/page/222"
+                      "text": "Show details for class Machine Learning"
                   }
               ]
             }
