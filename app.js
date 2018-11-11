@@ -11,7 +11,8 @@ const recommendation = require('./modules/recommendation');
 const course = require('./modules/courses.js');
 const application = require('./modules/application.js');
 const material = require('./modules/material.js');
-const faculty = require('./modules/faculty.js')
+const faculty = require('./modules/faculty.js');
+const project = require('./modules/project.js');
 
 const port = process.env.PORT || 5000;
 
@@ -76,6 +77,10 @@ function handleEvent(event) {
 
   if(message.toLowerCase() === "show me list of stei faculty members") {
     replyMessage = faculty.showFaculty();
+  }
+
+  if(message.toLowerCase() === "display project recommendations") {
+    replyMessage = project.showProjects();
   }
 
   // ================================================================ //
