@@ -9,13 +9,13 @@ var relatedClasses = {
 };
 
 var classDescriptions = {
-    "Machine Learning": "Learn how to design and implement programs that implements automatic learning",
-    "Natural Language Processing": "Learn how to process natural language into forms that computers can process",
-    "Computer Vision": "Learn how to process images and identify objects within",
-    "Sistem Terdistribusi": "Learn how to create a distributed system for various purposes",
-    "Kriptografi": "Learn how data is encrypted and the various ways to do it",
-    "Sistem Operasi": "Learn the fundamentals of how operating system works",
-    "Manajemen Basis Data": "Find out the various ways to optimize a database's performance"
+    "Machine Learning": "Learn about programs that implements automatic learning",
+    "Natural Language Processing": "Learn how to process natural language",
+    "Computer Vision": "Learn how to process images",
+    "Sistem Terdistribusi": "Learn how to create a distributed system",
+    "Kriptografi": "Learn how data encryption works",
+    "Sistem Operasi": "Learn how operating systems work",
+    "Manajemen Basis Data": "Learn how to optimize a DB's performance"
 }
 
 var recommendClasses = function() {
@@ -122,7 +122,7 @@ var recommendClasses = function() {
         "imageSize": "cover"
     }
   }
-  return testMessage;
+  return replyMessage;
 }
 
 module.exports.recommendClasses = recommendClasses;
