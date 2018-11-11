@@ -42,7 +42,14 @@ var recommendClasses = function() {
     for(var i = 0; i < columnNumber; i++) {
         var column = {
             "title": classNames[i],
-            "text": classDescriptions[classNames[i]]
+            "text": classDescriptions[classNames[i]],
+            "actions": [
+                {
+                    "type":"message",
+                    "label":"Yes",
+                    "text":"Show details for class " + classNames[i]
+                }
+            ]
         }
 
         columns.push(column);
