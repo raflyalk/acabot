@@ -89,13 +89,13 @@ var recommendClasses = function() {
               "defaultAction": {
                   "type": "message",
                   "label": "View detail",
-                  "uri": "Show details for class Machine Learning"
+                  "text": "Show details for class Machine Learning"
               },
               "actions": [
                   {
-                      "type": "postback",
-                      "label": "Buy",
-                      "data": "action=buy&itemid=111"
+                    "type": "message",
+                    "label": "View detail",
+                    "text": "Show details for class Machine Learning"
                   },
                   {
                       "type": "postback",
