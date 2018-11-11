@@ -12,8 +12,8 @@ const recommendation = require('./modules/recommendation');
 const port = process.env.PORT || 5000;
 
 const config = {
-  channelAccessToken: 'x/t0izSXG36JYM6i4LRK5lFEhJcUErHXMZ8/vXepyl5/oGFaYTft0dXM9yZrFmqkfVp8ifumLfUw5I6fZeXjy8CJttsFwwL/cDMXaJbvBqCOI3J9a02gKNymGWPYqkxe28B/8ywtKU+axqmUZYJKiwdB04t89/1O/w1cDnyilFU=',
-  channelSecret: 'b59f7ec80687b600e55d0be711128ffd'
+  channelAccessToken: '0hMjGmhhCiTd2xsfq136cabl4coS0AMwtDuNtyIShdQTB0SoPyLHn1vk9iEuaRPJMNFXSIDSahRy4FdxIshwr7DrjisG4d5ftdlbOc9HH9I3DTUktyK3jb4lSlko10uskqmT/Nl3WayC1o66DBCe1wdB04t89/1O/w1cDnyilFU=',
+  channelSecret: 'f0b8010d17c8c04c4a6f35850b4dae2a'
 };
 
 const app = express();
