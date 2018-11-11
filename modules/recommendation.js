@@ -84,12 +84,12 @@ var recommendClasses = function() {
             {
               "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
               "imageBackgroundColor": "#FFFFFF",
-              "title": "this is menu",
-              "text": "description",
+              "title": "Machine Learning",
+              "text": "Machine Learning",
               "defaultAction": {
-                  "type": "uri",
+                  "type": "message",
                   "label": "View detail",
-                  "uri": "http://example.com/page/123"
+                  "text": "Show details for class Machine Learning"
               },
               "actions": [
                   {
