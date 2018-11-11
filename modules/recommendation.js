@@ -84,8 +84,8 @@ var recommendClasses = function() {
             {
               "thumbnailImageUrl": "https://example.com/bot/images/item1.jpg",
               "imageBackgroundColor": "#FFFFFF",
-              "title": "Machine Learning",
-              "text": "Learn how to design and implement programs that implements automatic learning",
+              "title": "this is menu",
+              "text": "description",
               "defaultAction": {
                   "type": "uri",
                   "label": "View detail",
