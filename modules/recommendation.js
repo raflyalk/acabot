@@ -23,7 +23,8 @@ var recommendClasses = function() {
     classNames = []
     for(var i = 0; i < relatedClasses.length; i++) {
         for(var j = 0; j < relatedClasses[i].length; j++) {
-            if(!classNames.includes(relatedClasses[i][j])) {
+            if(!(classNames.includes(relatedClasses[i][j]))) {
+                console.log("Adding class");
                 classNames.push(relatedClasses[i][j]);
             }
         }
