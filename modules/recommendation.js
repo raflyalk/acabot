@@ -62,6 +62,8 @@ var recommendClasses = function() {
         columns.push(column);
     }
 
+    console.log("Number of columns: " + columns.length.toString());
+
     replyMessage = {
         "type": "template",
         "altText": "List of recommended classes",
