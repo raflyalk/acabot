@@ -142,7 +142,7 @@ var recommendClasses = function() {
         "imageSize": "cover"
     }
   }
-  return replyMessage;
+  return testMessage;
 }
 
 module.exports.recommendClasses = recommendClasses;
