@@ -83,6 +83,8 @@ function handleEvent(event) {
       replyMessage = recommendation.showDetails(detailType.substring(6));
     } else if(detailType.substring(0, 11) === "application") {
       replyMessage = application.showDetails(detailType.substring(12));
+    } else if(detailType.substring(0, 7) === "project") {
+      replyMessage = project.showDetails(detailType.substring(8));
     }
   }
 
