@@ -88,8 +88,8 @@ var showConfirmConsult = function() {
 	      }
 	    ],
 	    "text": "Are you sure to send the message?"
-  		};
-	}
+  		}
+	};
 
 	return replyMessage;
 }
