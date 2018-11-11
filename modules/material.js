@@ -15,4 +15,57 @@ var showMaterials = function() {
     return replyMessage;
 }
 
+// command : show topics 1
+var showMaterialDetail = function() {
+	var text = "Here is the topics of IF3170 Intelegensi Buatan : " +
+				"\n 1. Overview of AI problems. Examples of succesfull recent AI applications" +
+				"\n 2. Inteligence behavior and how to test the intteligence using Turing Test" +
+				"\n 3. Problems Solving by searching";
+
+	var replyMessage = {
+        "type": "text",
+        "text": text
+    }
+
+    return replyMessage;
+}
+
+// comand : show material recommendations 1
+var showMaterialRecommendation = function() {
+	var replyMessage = {
+	  "type": "template",
+	  "altText": "this is a carousel template",
+	  "template": {
+	    "type": "carousel",
+	    "actions": [],
+	    "columns": [
+	      {
+	        "title": "Sekolah Teknik Elektro dan Informatika",
+	        "text": "Web",
+	        "actions": [
+	          {
+	            "type": "uri",
+	            "label": "Open",
+	            "uri": "https://google.com"
+	          }
+	        ]
+	      },
+	      {
+	        "title": "Inference in artificial intelligence",
+	        "text": "Video",
+	        "actions": [
+	          {
+	            "type": "uri",
+	            "label": "Open",
+	            "uri": "https://google.com"
+	          }
+	        ]
+	      }
+	    ]
+	  }
+	}
+
+	return replyMessage;
+}
+
 module.exports.showMaterials = showMaterials;
