@@ -23,16 +23,14 @@ var recommendClasses = function() {
     classNames = []
     var classes = Object.keys(relatedClasses);
     for(var i = 0; i < classes.length; i++) {
-        console.log("Within loop");
         for(var j = 0; j < classes[i].length; j++) {
-            console.log("Adding class");
             classNames.push(relatedClasses[classes[i]][j]);
         }
     }
 
     var columnNumber = 0;
 
-    if(recommendClasses > 10) {
+    if(classNames.length > 10) {
         columnNumber = 10;
     } else {
         columnNumber = classNames.length;
