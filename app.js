@@ -47,6 +47,8 @@ function handleEvent(event) {
   };
 
   // ================ TASK INPUT AND NOTIFICATION ==================== //
+  console.log(message);
+  console.log(typeof(message));
   if(message === "1" || message === "2" || message === "3") {
     replymessage = course.showClassDetail(message);
   }
