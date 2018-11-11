@@ -47,7 +47,7 @@ function handleEvent(event) {
   };
 
   // ================ TASK INPUT AND NOTIFICATION ==================== //
-  if(isNaN(message)) {
+  if(message === "1" || message === "2" || message === "3") {
     replymessage = course.showClassDetail(message);
   }
 
