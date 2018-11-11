@@ -69,3 +69,5 @@ var showMaterialRecommendation = function() {
 }
 
 module.exports.showMaterials = showMaterials;
+module.exports.showClassTopics = showMaterialDetail;
+module.exports.showMaterialRecommendation = showMaterialRecommendation;

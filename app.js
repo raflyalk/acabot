@@ -48,7 +48,16 @@ function handleEvent(event) {
 
   // ================ TASK INPUT AND NOTIFICATION ==================== //
   if(message == 1 || message == 2 || message == 3) {
+    console.log("Within");
     replyMessage = course.showClassDetail(message);
+  }
+
+  if(message.toLowerCase() === "show topics 1") {
+    replyMessage = course.showClassTopics();
+  }
+
+  if(message.toLowerCase() === "show material recommendation 1") {
+    replyMessage = course.showMaterialRecommendation();
   }
 
   if (message.toLowerCase() === "display task") {
