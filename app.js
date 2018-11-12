@@ -46,6 +46,8 @@ function handleEvent(event) {
   	text: "This is default reply text"
   };
 
+  replyMessage = faculty.showConfirmConsult();
+
   // ================ TASK INPUT AND NOTIFICATION ==================== //
   if(message == 1 || message == 2 || message == 3) {
     console.log("Within");
@@ -118,8 +120,6 @@ function handleEvent(event) {
 
   if(message.toLowerCase() === "consult yes") {
     replyMessage = faculty.askConsult();
-  } else {
-    replyMessage = faculty.showConfirmConsult();
   }
 
   if(message.toLowerCase() === "confirm message yes") {
